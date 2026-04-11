@@ -9,7 +9,7 @@ const research = [
       "Wei Wang",
     researchYr: 2026,
     citebox: "popup1",
-    image: "assets/images/research-page/inteferenceNetwork.png",
+    image: "assets/images/research-page/colorpicker.jpg",
     abstract:
       "This is currently left empty and this can be considered as a dummy data 1",
     absbox: "absPopup1",
@@ -21,7 +21,7 @@ const research = [
       "Wei Wang",
     researchYr: 2026,
     citebox: "popup2",
-    image: "assets/images/research-page/crossLingual.png",
+    image: "assets/images/research-page/ai_stt_tts.jpg",
     abstract:
       "This is currently left empty and this can be considered as a dummy data 2",
     absbox: "absPopup2",
