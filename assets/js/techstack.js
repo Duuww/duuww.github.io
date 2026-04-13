@@ -49,6 +49,36 @@ const techStack = [
     langName:"Vue",
     langDesc:"<li>Vue is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.</li>"
   },
+  {
+    langImage:"assets/images/techstack-page/nvda.jpg",
+    langName:"NVDA",
+    langDesc:"<li>NVDA is a free and open-source screen reader for Windows that enables blind and visually impaired users to access and interact with their computers using text-to-speech and braille displays.</li>"
+  },
+  {
+    langImage:"assets/images/techstack-page/talkback.jpg",
+    langName:"TalkBack",
+    langDesc:"<li>TalkBack is a built-in one for Android devicesScreen reader。 TalkBack provides you with voice feedback to ensure you can use your mobile device even with limited vision.</li>"
+  },
+  {
+    langImage:"assets/images/techstack-page/voiceover.jpg",
+    langName:"VoiceOver",
+    langDesc:"<li>VoiceOver is a gesture-based screen reader on iPhone that provides spoken descriptions of everything on your screen, enabling users to navigate without seeing the display.</li>"
+  },
+  {
+    langImage:"assets/images/techstack-page/Narrator.jpg",
+    langName:"Narrator",
+    langDesc:"<li>Windows Narrator is a lightweight screen-reading tool. It reads aloud things on your screen—text and interface elements—makes it easier to interact with links and buttons, and even provides descriptions of images.</li>"
+  },
+  {
+    langImage:"assets/images/techstack-page/axe-core.jpg",
+    langName:"Axe-core",
+    langDesc:"<li>Axe is an accessibility testing engine for websites and other HTML-based user interfaces. </li>"
+  },
+    {
+    langImage:"assets/images/techstack-page/LightHouse.jpg",
+    langName:"LightHouse",
+    langDesc:"<li>Lighthouse has audits for performance, accessibility, progressive web apps, SEO, and more.</li>"
+  },
 ];
 
 const displayTechStacksCards = () => {
