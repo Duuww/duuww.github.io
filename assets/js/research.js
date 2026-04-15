@@ -33,7 +33,9 @@ const research = [
       "Wei Wang",
     researchYr: 2026,
     citebox: "popup3",
-    image: "assets/images/research-page/wordRepresentation.png",
+    image: "assets/images/research-page/translate.jpg",
+     abstract:
+     "一个基于 LibreTranslate 的本地离线浏览器翻译插件，支持中文、英文、德文、西班牙文互译，界面简洁，调用本地服务完成翻译。| A lightweight browser extension for local translation powered by LibreTranslate, supporting Chinese, English, German, and Spanish with a simple popup UI and local API integration.",
     absbox: "absPopup3",
   },
 ];
