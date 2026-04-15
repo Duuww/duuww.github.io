@@ -140,9 +140,12 @@ let footer = $(`
                 <h6 class="display">Get in Touch</h6>
               </div>
                 <form name="form1" action="https://formcarry.com/s/Ewx1PqxZXSP" method="POST" accept-charset="UTF-8" >
-                  <input id="name" type="text" name="name" placeholder="Your Name" required/>
-                  <input id="email" type="email" name="email" placeholder="Email Address" required/>                  
-                  <textarea id="textArea" name="message" placeholder="Type your Message" required></textarea>
+                  <label class="contact-label" for="name">Name</label>
+                  <input id="name" type="text" name="name" placeholder="Your Name" autocomplete="name" required aria-required="true"/>
+                  <label class="contact-label" for="email">Email</label>
+                  <input id="email" type="email" name="email" placeholder="Email Address" autocomplete="email" required aria-required="true"/>                  
+                  <label class="contact-label" for="textArea">Message</label>
+                  <textarea id="textArea" name="message" placeholder="Type your Message" required aria-required="true"></textarea>
               
                   <div id="main">
                     <button id="lnch" type="button" value="Send" >Send</button>
@@ -160,7 +163,7 @@ let footer = $(`
 
     <div class="rounded-social-buttons tag">
 
-    <a class="social-button linkedin" href="" target="_blank" >
+    <a class="social-button linkedin" href="" target="_blank" aria-label="go to linkedin">
     <!-- svg code for linkedin icon -->
       <svg class="linkedin-icon-footer" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8"
         stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
@@ -170,7 +173,7 @@ let footer = $(`
       </svg>
     </a>
 
-    <a class="social-button github" href="https://github.com/Duuww" target="_blank">
+    <a class="social-button github" href="https://github.com/Duuww" target="_blank" aria-label="go to github">
     <!-- SVG code for Github icon -->
     <svg class="github-icon-footer" width="45px" height="45px" viewBox="0 0 300 300">
         <!-- body -->
@@ -193,7 +196,7 @@ let footer = $(`
 
 //"Scroll to top" button
 let upArrow = $(`
-  <button id="btnScrollToTop" onclick="scrollToTop()"><i class="fas fa-2x fa-angle-up"></i></button>
+  <button id="btnScrollToTop" onclick="scrollToTop()"><i class="fas fa-2x fa-angle-up" aria-label="back to top"></i></button>
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   })
 `);

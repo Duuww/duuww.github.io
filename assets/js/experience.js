@@ -6,6 +6,7 @@ const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
     title: "信息无障碍工程师/Accessibility QA Engineer",
+    aria_label:"深圳市信息无障碍研究会",
     cardImage: "assets/images/experience-page/link.jpg",
     place: "深圳市信息无障碍研究会",
     time: "(8.30, 2024 - 至今)",
@@ -16,11 +17,11 @@ const exp = [
 const showCards2 = () => {
   let output = "";
   exp.forEach(
-    ({ title, cardImage, place, time, desp }) =>
+    ({ title, cardImage, place, time, desp, aria_label }) =>
       (output += `        
     <div class="col gaap" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="400"> 
       <div class="card card1">
-        <img src="${cardImage}" class="featured-image"/>
+        <img src="${cardImage}" class="featured-image" alt="${aria_label}"/>
         <article class="card-body">
           <header>
             <div class="title">

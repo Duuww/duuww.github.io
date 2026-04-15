@@ -195,7 +195,9 @@ a:hover {
   box-shadow: 0 19px 38px var(--shadow1), 0 15px 12px var(--shadow2);
 }
 
-.card .wrapper:hover .data {
+.card .wrapper:hover .data,
+.card .wrapper:focus .data,
+.card .wrapper:focus-within .data {
   transform: translateY(0);
 }
 
@@ -310,9 +312,16 @@ input[type="text"] {
   color: rgb(235, 148, 35);
 }
 
-.skill-card .wrapper:hover .menu-content span {
+.skill-card .wrapper:hover .menu-content span,
+.skill-card .wrapper:focus .menu-content span,
+.skill-card .wrapper:focus-within .menu-content span {
   transform: translate(-50%, -10px);
   opacity: 1;
+}
+
+.card .wrapper:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
 }
 
 .skill-card {
