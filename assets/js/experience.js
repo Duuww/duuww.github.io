@@ -5,7 +5,7 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "测试开发/Accessibility QA Engineer",
+    title: "信息无障碍工程师/Accessibility QA Engineer",
     cardImage: "assets/images/experience-page/link.jpg",
     place: "深圳市信息无障碍研究会",
     time: "(8.30, 2024 - 至今)",
