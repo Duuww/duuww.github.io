@@ -400,6 +400,26 @@ header p {
   margin-bottom: 70px;
 }
 
+.timeline-item-split {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.timeline-item-split .timeline-side-image {
+  width: 45%;
+  display: flex;
+}
+
+.timeline-item-split .timeline-side-image .timeline-img-header {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  margin-bottom: 0;
+  background-size: contain !important;
+  background-position: center !important;
+}
+
 .timeline-item:nth-child(even) .timeline-content {
   float: right;
   padding: 40px 30px 10px 30px;
@@ -695,6 +715,16 @@ blockquote {
     max-width: 100%;
     width: auto;
     margin-left: 70px;
+  }
+
+  .timeline .timeline-item-split {
+    display: block;
+  }
+
+  .timeline .timeline-item-split .timeline-side-image {
+    width: auto;
+    margin-left: 70px;
+    margin-top: 20px;
   }
 
   .timeline .timeline-item:nth-child(even) .timeline-content {

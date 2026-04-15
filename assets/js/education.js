@@ -2,30 +2,35 @@ AOS.init();
 
 // MOOCs Cards
 
-const moocs = document.querySelector(".moocs");
-const moocscards = [
+const moocs1 = document.querySelector(".moocs1");
+const moocscards1 = [
   {
     title: "W3Cx WAI0.1x 修课证明",
-    cardImage: "assets/images/education-page/c1.png",
+    cardImage: "assets/images/education-page/c1.jpg",
   },
   {
     title: "DHS Section 508 Trusted Tester",
     cardImage: "assets/images/education-page/c2.jpg",
 
   },
-  {
-    title: "NVDA Expert",
-    cardImage: "assets/images/education-page/c3.png",
-  },
-  {
-    title: "HarmonyOS应用开发者高级认证",
-    cardImage: "assets/images/education-page/c4.jpg",
-  },
+
 ];
+
+const moocs2 = document.querySelector(".moocs2")
+// const moocscards2 =[
+//   {
+//     title: "NVDA Expert",
+//     cardImage: "assets/images/education-page/c3.jpg",
+//   },
+//   {
+//     title: "HarmonyOS应用开发者高级认证",
+//     cardImage: "assets/images/education-page/c4.jpg",
+//   },
+// ]
 
 const showCards = () => {
   let output = "";
-  moocscards.forEach(
+  moocscards1.forEach(
     ({ title, cardImage }) =>
       (output += `        
         <div class="col-6 col-md-3 col-sm-4 column" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600" >  
@@ -34,7 +39,7 @@ const showCards = () => {
                   <div class="content-overlay"></div>
                     <img src=${cardImage} class="card-img-top content-image">     
                   <div class="content-details fadeIn-bottom">
-                    <a href="${title}" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                    <a href=""><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
                   </div>
                 </div>
                 <div class="card-body">
@@ -44,7 +49,27 @@ const showCards = () => {
         </div>        
       `)
   );
-  moocs.innerHTML = output;
+  // moocscards2.forEach(
+  //   ({ title, cardImage }) =>
+  //     (output += `        
+  //       <div class="col-6 col-md-3 col-sm-4 column" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600" >  
+  //           <div class="card mb-3 mx-auto">
+  //              <div class="content">
+  //                 <div class="content-overlay"></div>
+  //                   <img src=${cardImage} class="card-img-top content-image">     
+  //                 <div class="content-details fadeIn-bottom">
+  //                   <a href="${title}" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+  //                 </div>
+  //               </div>
+  //               <div class="card-body">
+  //                   <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">${title}</h6>
+  //               </div>
+  //           </div>
+  //       </div>        
+  //     `)
+  // );
+  moocs1.innerHTML = output;
+  // moocs2.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards);
 
