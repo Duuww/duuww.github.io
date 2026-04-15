@@ -573,6 +573,21 @@ blockquote {
   
 }
 
+.timelineHeading,
+.timelineHeading2,
+.timelineHeading3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.83em 0;
+}
+
+.timelineSubheading {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
     /* Media Query  header/footer */
 
     @media (max-width: 768px) {
