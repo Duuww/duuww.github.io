@@ -75,7 +75,7 @@ const techStack = [
     langDesc:"<li>Axe is an accessibility testing engine for websites and other HTML-based user interfaces. </li>"
   },
     {
-    langImage:"assets/images/techstack-page/lightHouse.jpg",
+    langImage:"assets/images/techstack-page/lighthouse.jpg",
     langName:"LightHouse",
     langDesc:"<li>Lighthouse has audits for performance, accessibility, progressive web apps, SEO, and more.</li>"
   },
