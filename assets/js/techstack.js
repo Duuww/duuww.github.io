@@ -65,7 +65,7 @@ const techStack = [
     langDesc:"<li>VoiceOver is a gesture-based screen reader on iPhone that provides spoken descriptions of everything on your screen, enabling users to navigate without seeing the display.</li>"
   },
   {
-    langImage:"assets/images/techstack-page/Narrator.jpg",
+    langImage:"assets/images/techstack-page/narrator.jpg",
     langName:"Narrator",
     langDesc:"<li>Windows Narrator is a lightweight screen-reading tool. It reads aloud things on your screen—text and interface elements—makes it easier to interact with links and buttons, and even provides descriptions of images.</li>"
   },
@@ -75,7 +75,7 @@ const techStack = [
     langDesc:"<li>Axe is an accessibility testing engine for websites and other HTML-based user interfaces. </li>"
   },
     {
-    langImage:"assets/images/techstack-page/LightHouse.jpg",
+    langImage:"assets/images/techstack-page/lightHouse.jpg",
     langName:"LightHouse",
     langDesc:"<li>Lighthouse has audits for performance, accessibility, progressive web apps, SEO, and more.</li>"
   },
