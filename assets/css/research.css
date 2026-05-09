@@ -74,6 +74,117 @@ body {
   color: var(--p-up);
 }
 
+.project-card-content {
+    position: relative;
+    padding: 2rem 2.2rem;
+    vertical-align: top;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.project-title {
+    display: inline-block;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.project-summary {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1.1fr;
+    gap: 1rem;
+    margin: 1.4rem 0 1.6rem;
+}
+
+.project-info-block {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.project-info-label {
+    display: block;
+    color: #ef4f6f;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.45rem;
+}
+
+.project-info-block p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.tech-tags span {
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    color: #ffffff;
+    background: rgba(239, 79, 111, 0.18);
+    border: 1px solid rgba(239, 79, 111, 0.35);
+}
+
+.project-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.2rem;
+}
+
+.project-github-btn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-abstract {
+    margin-top: 1rem;
+}
+
+.project-abstract .card-body {
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #ef4f6f;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    color: rgba(255, 255, 255, 0.86);
+    line-height: 1.65;
+}
+
+/* 响应式：小屏幕下改为单列 */
+@media (max-width: 900px) {
+    .project-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .project-actions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .project-card-content {
+        padding: 1.4rem;
+    }
+}
+
+
 #researchDetailsTable{
   width: 100%;
   display: flex;
