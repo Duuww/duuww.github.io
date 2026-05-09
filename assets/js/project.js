@@ -6,67 +6,63 @@ const projectcards = document.querySelector(".projectcards");
 // Array of object for projects
 const projects = [
   {
-    title: "某出海网络/智能硬件产品无障碍合规评估",
-    cardImage: "assets/images/project-page/router.jpg",
-    rule: "EN 301 549 Chapter 5 Hardware、Chapter 9 Web、Chapter 10 Non-web Documents、Chapter 11 Software、Chapter 12 Documentation and Support Services；相关 WCAG 2.2 A/AA 成功准则。",
-    product: "web、Hardware",
-    country: "EU / Germany",
-    description: "EU ICT Accessibility Compliance Assessment: Hardware, Software & Documentation",
-    role: "无障碍合规测试执行人员 / 线上客户技术支持。负责依据 EN 301 549 和 WCAG 2.2 执行测试，记录问题、提供标准依据和整改建议，并在客户会议中解释测试发现。",
-    range: "设备物理控件、状态反馈、Web 管理界面、软件交互流程、用户说明书及辅助功能支持说明。",
-    tool: "NVDA、键盘-only 操作、浏览器开发者工具、Accessibility Tree、颜色对比度工具、截图/录屏工具、合规检查表。",
-    frage: "硬件状态提示只依赖视觉、Web管理界面部分控件名称无法传递正确意义、键盘焦点顺序异常、部分控件缺少焦点、颜色对比度不足、说明书文档结构不完整、缺少相应的无障碍声明。",
-    out: "问题清单、复现步骤、截图/录屏、涉及标准依据、整改建议、复测记录、最终交付报告。",
-    end: "参与客户线上答疑，解释问题影响和对应标准要求；根据客户修复版本执行复测并更新问题状态。"
+    title: "某出海电商/官网美国无障碍合规评估",
+    cardImage: "assets/images/project-page/sportcamra.png",
+    rule: "Section 508 ICT Testing Baseline / DHS Trusted Tester；WCAG A/AA 相关要求。",
+    product: "Web、App",
+    country: "EN / America",
+    role: "无障碍合规测试执行人员 / 客户技术支持。依据 Section 508 ICT Testing Baseline 和 DHS Trusted Tester 方法执行测试，协助客户理解问题原因及整改方向。",
+    range: "首页、登录/注册、商品详情、购物车、结算流程、个人中心、消息中心、商品对比、商品搜索、移动端适配等页面。",
+    tool: "NVDA、键盘-only 操作、浏览器开发者工具、ANDI、颜色对比度工具、截图/录屏工具、SCRT。",
+    frage: "大量轮播图无法进行停止轮播、大量有意义的视频未添加脚本信息或字幕、商品链接未准确描述、商品图片缺少相应替代文本、颜色对比度不足、表格部分缺少相应的结构信息、菜单未适配键盘交互操作、存在仅能通过鼠标悬浮展开的内容",
+    out: "测试问题记录、问题复现步骤、标准依据、整改建议、客户答疑材料、复测记录、最终交付报告输入。",
+    end: "支持客户开发团队定位问题并解释整改方向；对修复内容进行复测，确认部分问题关闭并记录遗留风险。"
   },
   {
-    title: "某出海网络/智能硬件产品无障碍合规评估",
-    cardImage: "assets/images/project-page/router.jpg",
-    rule: "EN 301 549 Chapter 5 Hardware、Chapter 9 Web、Chapter 10 Non-web Documents、Chapter 11 Software、Chapter 12 Documentation and Support Services；相关 WCAG 2.2 A/AA 成功准则。",
-    product: "web、Hardware",
+    title: "某出海电商/官网欧盟无障碍合规评估",
+    cardImage: "assets/images/project-page/shopping.jpg",
+    rule: "EN 301 549 Chapter 9 Web、Chapter 11 Software；相关 WCAG 2.2 A/AA 成功准则。",
+    product: "Web、App",
     country: "EU / Germany",
-    description: "EU ICT Accessibility Compliance Assessment: Hardware, Software & Documentation",
-    role: "无障碍合规测试执行人员 / 线上客户技术支持。负责依据 EN 301 549 和 WCAG 2.2 执行测试，记录问题、提供标准依据和整改建议，并在客户会议中解释测试发现。",
-    range: "设备物理控件、状态反馈、Web 管理界面、软件交互流程、用户说明书及辅助功能支持说明。",
+    role: "无障碍合规测试执行人员 / 线上客户技术支持。负责依据 EN 301 549 和 WCAG 2.2 执行测试，记录问题及对应问题截图并提供相应修改建议，填写相关的合规评估表，协助客户完成整改及复测上线",
+    range: "首页、登录/注册、商品详情、购物车、结算流程、表单、弹窗、导航菜单、图片链接、商品列表、移动端等关键页面。",
     tool: "NVDA、键盘-only 操作、浏览器开发者工具、Accessibility Tree、颜色对比度工具、截图/录屏工具、合规检查表。",
-    frage: "硬件状态提示只依赖视觉、Web管理界面部分控件名称无法传递正确意义、键盘焦点顺序异常、部分控件缺少焦点、颜色对比度不足、说明书文档结构不完整、缺少相应的无障碍声明。",
-    out: "问题清单、复现步骤、截图/录屏、涉及标准依据、整改建议、复测记录、最终交付报告。",
-    end: "参与客户线上答疑，解释问题影响和对应标准要求；根据客户修复版本执行复测并更新问题状态。"
+    frage: "部分图片缺少对应的替代文本、部分控件图标存在对比度不足、部分内容仅通过颜色传达意义、存在部分冗余焦点、评论模块存在控件状态缺失、部分内容存在未适配移动端、部分内容放大后存在内容遮盖与缺失",
+    out: "问题清单、复现步骤、截图/录屏、涉及标准依据、整改建议、复测记录、Web整体评估表、App整体评估表、最终交付报告输入。",
+    end: "参与客户线上答疑，解释标准要求以及如何整改；根据客户修复批次，同时推进执行新链路的测试与问题回归并更新问题状态。"
     },
   {
-    title: "某出海网络/智能硬件产品无障碍合规评估",
+    title: "某出海网络/智能硬件产品欧盟无障碍合规评估",
     cardImage: "assets/images/project-page/router.jpg",
     rule: "EN 301 549 Chapter 5 Hardware、Chapter 9 Web、Chapter 10 Non-web Documents、Chapter 11 Software、Chapter 12 Documentation and Support Services；相关 WCAG 2.2 A/AA 成功准则。",
-    product: "web、Hardware",
+    product: "Web、Hardware",
     country: "EU / Germany",
-    description: "EU ICT Accessibility Compliance Assessment: Hardware, Software & Documentation",
     role: "无障碍合规测试执行人员 / 线上客户技术支持。负责依据 EN 301 549 和 WCAG 2.2 执行测试，记录问题、提供标准依据和整改建议，并在客户会议中解释测试发现。",
-    range: "设备物理控件、状态反馈、Web 管理界面、软件交互流程、用户说明书及辅助功能支持说明。",
+    range: "设备物理控件、灯光/声音/触觉 状态反馈、Web 管理界面、软件交互流程、按键可识别性、用户说明书及辅助功能支持说明等。",
     tool: "NVDA、键盘-only 操作、浏览器开发者工具、Accessibility Tree、颜色对比度工具、截图/录屏工具、合规检查表。",
     frage: "硬件状态提示只依赖视觉、Web管理界面部分控件名称无法传递正确意义、键盘焦点顺序异常、部分控件缺少焦点、颜色对比度不足、说明书文档结构不完整、缺少相应的无障碍声明。",
-    out: "问题清单、复现步骤、截图/录屏、涉及标准依据、整改建议、复测记录、最终交付报告。",
+    out: "问题清单、复现步骤、截图/录屏、涉及标准依据、整改建议、复测记录、最终交付报告输入。",
     end: "参与客户线上答疑，解释问题影响和对应标准要求；根据客户修复版本执行复测并更新问题状态。"
   },
-  {
-    title: "某出海网络/智能硬件产品无障碍合规评估",
-    cardImage: "assets/images/project-page/router.jpg",
-    rule: "EN 301 549 Chapter 5 Hardware、Chapter 9 Web、Chapter 10 Non-web Documents、Chapter 11 Software、Chapter 12 Documentation and Support Services；相关 WCAG 2.2 A/AA 成功准则。",
-    product: "web、Hardware",
-    country: "EU / Germany",
-    description: "EU ICT Accessibility Compliance Assessment: Hardware, Software & Documentation",
-    role: "无障碍合规测试执行人员 / 线上客户技术支持。负责依据 EN 301 549 和 WCAG 2.2 执行测试，记录问题、提供标准依据和整改建议，并在客户会议中解释测试发现。",
-    range: "设备物理控件、状态反馈、Web 管理界面、软件交互流程、用户说明书及辅助功能支持说明。",
-    tool: "NVDA、键盘-only 操作、浏览器开发者工具、Accessibility Tree、颜色对比度工具、截图/录屏工具、合规检查表。",
-    frage: "硬件状态提示只依赖视觉、Web管理界面部分控件名称无法传递正确意义、键盘焦点顺序异常、部分控件缺少焦点、颜色对比度不足、说明书文档结构不完整、缺少相应的无障碍声明。",
-    out: "问题清单、复现步骤、截图/录屏、涉及标准依据、整改建议、复测记录、最终交付报告。",
-    end: "参与客户线上答疑，解释问题影响和对应标准要求；根据客户修复版本执行复测并更新问题状态。"
+    {
+    title: "某国产手机系统/应用无障碍适配评估",
+    cardImage: "assets/images/project-page/phone.png",
+    rule: "工信部无障碍标准GB/T 37668-2019；相关 WCAG 2.2 A/AA 成功准则。",
+    product: "国产手机系统、App",
+    country: "CN / China",
+    role: "无障碍测试执行人员 / 技术答疑支持。负责在移动端系统环境下执行无障碍测试，记录系统功能与典型场景中的可访问性问题，并支持客户会议答疑。",
+    range: "系统设置、无障碍设置、系统应用、通知、弹窗、灵动岛、输入流程、读屏交互、手势操作、字体缩放、高对比度/显示增强相关功能。",
+    tool: "TalkBack、屏幕放大、android studio、系统字体缩放、键盘/外接设备操作、截图/录屏工具",
+    frage: "读屏朗读顺序异常、控件标签不清晰、动态状态变化未被读屏提示、字体放大后布局遮挡、手势操作缺少替代方式、错误提示不明确、颜色对比度不足、手势缺少适配、操作方式不符合提示信息等",
+    out: "问题清单、复现路径、截图/录屏、整改建议、会议答疑说明、复测记录。",
+    end: "参与客户线上周会，解释问题影响和用户场景；根据修复版本进行复测或更新问题状态。"
   },
 ];
 
 // function for rendering project cards data
 const showCards = () => {
   let output = "";
-  projects.forEach(({ title, cardImage, rule, product, country, description, role, range, tool, frage, out, end }) => {
+  projects.forEach(({ title, cardImage, rule, product, country, role, range, tool, frage, out, end }) => {
     output += `       
         <div
           class="column project-card card"
@@ -83,7 +79,7 @@ const showCards = () => {
               style="background: url(${cardImage}) center / cover no-repeat;"
             >
               <button class="project-card-badge js-open-project-detail" type="button">
-                项目案例
+                查看案例详情
               </button>
             </div>
 
