@@ -1185,3 +1185,68 @@ SVG ANIMATIONS PROJECT PAGE
   animation-duration: 3.3s;
   transform-origin: 785.132px 295.833px;
 }
+
+@media only screen and (max-width: 767px) {
+  .container.pt-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .container.pt-5 section {
+    height: auto !important;
+    min-height: auto;
+  }
+
+  .dropdown {
+    position: static;
+    padding-right: 15px;
+    margin-top: 1.5rem !important;
+  }
+
+  .godown {
+    padding-top: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .godown svg {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .project-box {
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .page-content.projectcards {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .project-card {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .project-card-wrapper {
+    min-height: auto;
+  }
+
+  .project-card-cover {
+    height: 220px;
+  }
+
+  .project-card-body {
+    padding: 22px 20px 20px;
+  }
+
+  .project-card-title {
+    font-size: 24px;
+  }
+
+  .project-card-title span {
+    font-size: 16px;
+  }
+}

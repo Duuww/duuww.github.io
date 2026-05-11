@@ -915,3 +915,86 @@ blockquote {
       text-align: center;
     }
   }
+
+@media only screen and (max-width: 767px) {
+  .container.pt-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .container.pt-5 section {
+    height: auto !important;
+    min-height: auto;
+    padding: 3rem 0 2rem;
+  }
+
+  .dropdown1,
+  .dropdown2 {
+    position: static;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+
+  .godown {
+    position: static;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .godown svg {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .edSection {
+    margin-top: 0;
+  }
+
+  .timeline {
+    padding-top: 3rem;
+  }
+
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline .timeline-img {
+    left: 24px;
+  }
+
+  .timeline .timeline-content {
+    width: auto;
+    margin-left: 56px;
+    padding: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .timeline .timeline-item:nth-child(even) .timeline-content {
+    padding: 1.25rem;
+  }
+
+  .timeline .timeline-item-split .timeline-side-image {
+    margin-left: 56px;
+  }
+
+  .timeline .timeline-item-split .timeline-side-image .timeline-img-header,
+  .timeline .timeline-img-header {
+    min-height: 160px;
+    height: 160px;
+    background-size: contain !important;
+    background-position: center !important;
+  }
+
+  .timelineHeading,
+  .timelineHeading2,
+  .timelineHeading3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content .alignment {
+    position: static;
+    padding-right: 0;
+  }
+}

@@ -155,8 +155,7 @@
         <h4 class="text-center heading1 exp-head">Accessibility Testing <span class="my_experience">Coverage</span></h4>
 
         <main class="container">
-            <!-- Dynamic experience Card -->
-
+            <!-- Dynamic ability Card -->
             <section data-aos="fade-up">
                     <p class="text-center mb-5" style="font-size: 0.95rem; color: var(--text-color);">
                         Hands-on accessibility testing and compliance evaluation experience across international standards and ICT product types.
@@ -261,6 +260,410 @@
             </section>
         </main>
 
+        <h4 class="text-center heading1 exp-head">Accessibility Standards <span class="my_experience">Knowledge Map</span></h4>
+        <main class="container">
+            <!-- Dynamic knowledge_map Card -->
+            <section class="km-section" data-aos="fade-up">
+                <p class="text-center km-section-subtitle">无障碍标准核心概念知识图谱</p>
+
+                <!-- ========== WCAG POUR 四大原则 ========== -->
+                <div class="km-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="km-card-title">
+                        <i class="fas fa-sitemap"></i>
+                        WCAG POUR 四大原则 / WCAG POUR Principles
+                    </h3>
+                    
+                    <!-- 核心节点 -->
+                    <div class="text-center mb-4">
+                        <div class="km-node km-node-primary d-inline-block">
+                            <div style="font-size: 1.1rem;">WCAG POUR 四大原则</div>
+                            <div class="km-node-label" style="color: rgba(255,255,255,0.8);">所有标准的技术内核</div>
+                        </div>
+                    </div>
+
+                    <!-- 四大原则 -->
+                    <div class="km-pour-grid">
+                        <div class="km-pour-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="km-pour-title">可感知</div>
+                            <div class="km-pour-en">Perceivable</div>
+                            <div>
+                                <span class="km-criterion">1.1.1 非文本内容</span>
+                                <span class="km-criterion">1.4.3 对比度(AA)</span>
+                                <span class="km-criterion">1.4.11 非文字对比</span>
+                            </div>
+                        </div>
+                        <div class="km-pour-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="km-pour-title">可操作</div>
+                            <div class="km-pour-en">Operable</div>
+                            <div>
+                                <span class="km-criterion">2.1.1 键盘可访问</span>
+                                <span class="km-criterion">2.4.7 焦点可见</span>
+                                <span class="km-criterion">2.4.11 焦点外观</span>
+                            </div>
+                        </div>
+                        <div class="km-pour-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="km-pour-title">可理解</div>
+                            <div class="km-pour-en">Understandable</div>
+                            <div>
+                                <span class="km-criterion">3.1.1 页面语言</span>
+                                <span class="km-criterion">3.3.1 错误识别</span>
+                                <span class="km-criterion">3.3.7 多余输入(2.2)</span>
+                            </div>
+                        </div>
+                        <div class="km-pour-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="km-pour-title">健壮性</div>
+                            <div class="km-pour-en">Robust</div>
+                            <div>
+                                <span class="km-criterion">4.1.2 名称/角色/值</span>
+                                <span class="km-criterion">4.1.3 状态消息</span>
+                                <span class="km-criterion">ARIA 语义化</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 标准层级关系 ========== -->
+                <div class="km-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="km-card-title">
+                        <i class="fas fa-layer-group"></i>
+                        标准层级关系 / Standards Hierarchy
+                    </h3>
+                    
+
+                    <!-- 图例 -->
+                     <div class="km-hierarchy-container">
+                        <!-- SVG 连线层 -->
+                        <svg class="km-hierarchy-svg" id="hierarchySvg" preserveAspectRatio="xMidYMid meet">
+                            <!-- 连线将由 JavaScript 动态生成 -->
+                        </svg>
+
+                        <div class="km-hierarchy" id="hierarchyContainer">
+                            <!-- 技术基础层 -->
+                            <div class="km-hierarchy-level" id="level-base">
+                                <div class="km-hierarchy-label">技术基础层</div>
+                                <div class="km-hierarchy-nodes">
+                                    <div class="km-hierarchy-node wcag" id="node-wcag">
+                                        <div class="km-hierarchy-node-title">WCAG 2.1 / 2.2</div>
+                                        <div class="km-hierarchy-node-desc">W3C · 全球技术规范 · 源头标准</div>
+                                        <div class="km-hierarchy-node-desc">A / AA / AAA 三级合规体系</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- 国际引用层 -->
+                            <div class="km-hierarchy-level" id="level-intl">
+                                <div class="km-hierarchy-label">国际引用层</div>
+                                <div class="km-hierarchy-nodes">
+                                    <div class="km-hierarchy-node eu" id="node-en">
+                                        <div class="km-hierarchy-node-title">EN 301 549</div>
+                                        <div class="km-hierarchy-node-desc">欧盟 · ETSI/CEN</div>
+                                        <div class="km-hierarchy-node-desc">强制性 · 全ICT产品</div>
+                                        <div class="km-badge km-badge-green mt-2">直接引用AA</div>
+                                        <div class="km-badge km-badge-green mt-2">2021 v3.2.1</div>
+                                    </div>
+                                    <div class="km-hierarchy-node us" id="node-508">
+                                        <div class="km-hierarchy-node-title">Section 508</div>
+                                        <div class="km-hierarchy-node-desc">美国 · Access Board</div>
+                                        <div class="km-hierarchy-node-desc">强制性 · 联邦机构</div>
+                                        <div class="km-badge km-badge-orange mt-2">引用2.0 AA</div>
+                                        <div class="km-badge km-badge-orange mt-2">2018年刷新版</div>
+                                    </div>
+                                    <div class="km-hierarchy-node cn" id="node-gbt">
+                                        <div class="km-hierarchy-node-title">GB/T 37668-2019</div>
+                                        <div class="km-hierarchy-node-desc">中国 · 国家标准委</div>
+                                        <div class="km-hierarchy-node-desc">推荐性 · 互联网内容</div>
+                                        <div class="km-badge km-badge-red mt-2">参考框架</div>
+                                        <div class="km-badge km-badge-red mt-2">2019年发布</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 法规绑定层 -->
+                            <div class="km-hierarchy-level" id="level-law">
+                                <div class="km-hierarchy-label">法规绑定层</div>
+                                <div class="km-hierarchy-nodes">
+                                    <div class="km-hierarchy-node eu" id="node-eaa">
+                                        <div class="km-hierarchy-node-title">欧盟无障碍法案</div>
+                                    </div>
+                                    <div class="km-hierarchy-node eu" id="node-procurement">
+                                        <div class="km-hierarchy-node-title">公共采购指令</div>
+                                    </div>
+                                    <div class="km-hierarchy-node us" id="node-rehab">
+                                        <div class="km-hierarchy-node-title">Rehabilitation Act §508</div>
+                                    </div>
+                                    <div class="km-hierarchy-node us" id="node-ada">
+                                        <div class="km-hierarchy-node-title">ADA</div>
+                                    </div>
+                                    <div class="km-hierarchy-node cn" id="node-cn-law">
+                                        <div class="km-hierarchy-node-title">政府/金融/教育</div>
+                                        <div class="km-hierarchy-node-desc">行业执行规范</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- ========== 适用范围对比（ICT类别） ========== -->
+                <div class="km-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="km-card-title">
+                        <i class="fas fa-th"></i>
+                        适用范围对比 / ICT Coverage Comparison
+                    </h3>
+                    
+                    <div class="km-table-wrapper">
+                        <table class="km-table">
+                            <thead>
+                                <tr>
+                                    <th>ICT类别</th>
+                                    <th>EN 301 549</th>
+                                    <th>Section 508</th>
+                                    <th>GB/T 37668</th>
+                                    <th>WCAG</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>网页内容</td>
+                                    <td class="km-check">&#10003; 第9章</td>
+                                    <td class="km-check">&#10003; 核心</td>
+                                    <td class="km-check">&#10003; 核心</td>
+                                    <td class="km-check">&#10003; 全部</td>
+                                </tr>
+                                <tr>
+                                    <td>桌面/移动软件</td>
+                                    <td class="km-check">&#10003; 第11章</td>
+                                    <td class="km-check">&#10003;</td>
+                                    <td class="km-dash">— 不含</td>
+                                    <td class="km-dash">— 不含</td>
+                                </tr>
+                                <tr>
+                                    <td>硬件设备</td>
+                                    <td class="km-check">&#10003; 第8章</td>
+                                    <td class="km-check">&#10003; 硬件章</td>
+                                    <td class="km-dash">— 不含</td>
+                                    <td class="km-dash">— 不含</td>
+                                </tr>
+                                <tr>
+                                    <td>电子文档</td>
+                                    <td class="km-check">&#10003; 第10章</td>
+                                    <td class="km-check">&#10003;</td>
+                                    <td class="km-dash">— 不含</td>
+                                    <td class="km-dash">— 不含</td>
+                                </tr>
+                                <tr>
+                                    <td>通信/电话服务</td>
+                                    <td class="km-check">&#10003; 第6章</td>
+                                    <td class="km-check">&#10003; E103</td>
+                                    <td class="km-dash">— 不含</td>
+                                    <td class="km-dash">— 不含</td>
+                                </tr>
+                                <tr>
+                                    <td>自助服务终端</td>
+                                    <td class="km-check">&#10003; 第8章</td>
+                                    <td class="km-check">&#10003; C101-C407</td>
+                                    <td class="km-dash">— 不含</td>
+                                    <td class="km-dash">— 不含</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="km-note">
+                        <strong>说明：</strong>&#10003; 覆盖 &nbsp;&nbsp; — 不含或间接覆盖<br>
+                        WCAG 2.2 于2023年发布；EN 301 549 v3.2.1 与 WCAG 2.1 AA 完全对齐
+                    </div>
+                </div>
+
+                <!-- ========== 各标准专属扩展内容 ========== -->
+                <div class="km-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="km-card-title">
+                        <i class="fas fa-puzzle-piece"></i>
+                        各标准专属扩展内容 / Standard-Specific Extensions
+                    </h3>
+                    <p style="color: var(--km-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">WCAG覆盖范围之外的特定要求</p>
+                    
+                    <div class="km-extension-grid">
+                        <!-- EN 301 549 -->
+                        <div class="km-extension-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="km-extension-header">
+                                <span class="km-badge km-badge-green">EU</span>
+                                <div>
+                                    <div class="km-extension-title">EN 301 549 扩展</div>
+                                    <div class="km-extension-subtitle">超出WCAG的章节</div>
+                                </div>
+                            </div>
+                            <div class="km-extension-items">
+                                <span class="km-extension-item">Ch.5 通用</span>
+                                <span class="km-extension-item">Ch.6 ICT语音</span>
+                                <span class="km-extension-item">Ch.7 视频字幕</span>
+                                <span class="km-extension-item">Ch.8 硬件</span>
+                                <span class="km-extension-item">Ch.12 文档</span>
+                                <span class="km-extension-item">Ch.13 ICT服务</span>
+                            </div>
+                        </div>
+
+                        <!-- Section 508 -->
+                        <div class="km-extension-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="km-extension-header">
+                                <span class="km-badge km-badge-orange">US</span>
+                                <div>
+                                    <div class="km-extension-title">Section 508 专项</div>
+                                    <div class="km-extension-subtitle">联邦特有要求</div>
+                                </div>
+                            </div>
+                            <div class="km-extension-items">
+                                <span class="km-extension-item">E101 功能性能标准</span>
+                                <span class="km-extension-item">E103 无障碍电话</span>
+                                <span class="km-extension-item">C101-C407 采购要求</span>
+                                <span class="km-extension-item">VPAT 自愿产品报告</span>
+                            </div>
+                        </div>
+
+                        <!-- GB/T 37668 -->
+                        <div class="km-extension-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="km-extension-header">
+                                <span class="km-badge km-badge-red">CN</span>
+                                <div>
+                                    <div class="km-extension-title">GB/T 37668 特色</div>
+                                    <div class="km-extension-subtitle">中国本地化要求</div>
+                                </div>
+                            </div>
+                            <div class="km-extension-items">
+                                <span class="km-extension-item">中文字体可读性规范</span>
+                                <span class="km-extension-item">拼音/汉字输入无障碍</span>
+                                <span class="km-extension-item">国产屏幕阅读器兼容</span>
+                                <span class="km-extension-item">测试方法附录（本土化）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 合规评测方法与工具 ========== -->
+                <div class="km-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="km-card-title">
+                        <i class="fas fa-tools"></i>
+                        合规评测方法与工具 / Testing Methods & Tools
+                    </h3>
+                    
+                    <div class="km-method-grid">
+                        <div class="km-method-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="km-method-title">自动化测试</div>
+                            <div class="km-method-desc">axe / WAVE / Lighthouse</div>
+                        </div>
+                        <div class="km-method-card" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="km-method-title">人工审查</div>
+                            <div class="km-method-desc">专家走查 + WCAG 核对</div>
+                        </div>
+                        <div class="km-method-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="km-method-title">辅助技术测试</div>
+                            <div class="km-method-desc">NVDA / JAWS / VoiceOver</div>
+                        </div>
+                        <div class="km-method-card" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="km-method-title">用户测试</div>
+                            <div class="km-method-desc">残障用户参与评估</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 合规报告格式 ========== -->
+                <div class="km-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="km-card-title">
+                        <i class="fas fa-file-alt"></i>
+                        合规报告格式 / Compliance Report Formats
+                    </h3>
+                    
+                    <div class="km-report-grid">
+                        <div class="km-report-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="km-report-dot purple"></div>
+                            <div class="km-report-text">
+                                <div class="km-report-title">ACR</div>
+                                <div class="km-report-desc">无障碍合规报告</div>
+                            </div>
+                        </div>
+                        <div class="km-report-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="km-report-dot orange"></div>
+                            <div class="km-report-text">
+                                <div class="km-report-title">VPAT</div>
+                                <div class="km-report-desc">美国Section 508专用</div>
+                            </div>
+                        </div>
+                        <div class="km-report-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="km-report-dot green"></div>
+                            <div class="km-report-text">
+                                <div class="km-report-title">EU 无障碍声明</div>
+                                <div class="km-report-desc">EAA强制要求</div>
+                            </div>
+                        </div>
+                        <div class="km-report-item" data-aos="fade-up" data-aos-delay="250">
+                            <div class="km-report-dot red"></div>
+                            <div class="km-report-text">
+                                <div class="km-report-title">GB/T 测试报告</div>
+                                <div class="km-report-desc">国内评测机构认证</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 版本演进时间线 ========== -->
+                <div class="km-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="km-card-title">
+                        <i class="fas fa-history"></i>
+                        版本演进时间线 / Standards Evolution Timeline
+                    </h3>
+                    
+                    <div class="km-timeline">
+                        <div class="km-timeline-items">
+                            <div class="km-timeline-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="km-timeline-dot"></div>
+                                <div class="km-timeline-year">2008</div>
+                                <div class="km-timeline-label">WCAG 2.0</div>
+                            </div>
+                            <div class="km-timeline-item" data-aos="fade-up" data-aos-delay="150">
+                                <div class="km-timeline-dot"></div>
+                                <div class="km-timeline-year">2017</div>
+                                <div class="km-timeline-label">EN 301 549 v1</div>
+                            </div>
+                            <div class="km-timeline-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="km-timeline-dot"></div>
+                                <div class="km-timeline-year">2018</div>
+                                <div class="km-timeline-label">S508 刷新<br>WCAG 2.1</div>
+                            </div>
+                            <div class="km-timeline-item" data-aos="fade-up" data-aos-delay="250">
+                                <div class="km-timeline-dot"></div>
+                                <div class="km-timeline-year">2019</div>
+                                <div class="km-timeline-label">GB/T 37668</div>
+                            </div>
+                            <div class="km-timeline-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="km-timeline-dot"></div>
+                                <div class="km-timeline-year">2021</div>
+                                <div class="km-timeline-label">EN 301 549 v3</div>
+                            </div>
+                            <div class="km-timeline-item" data-aos="fade-up" data-aos-delay="350">
+                                <div class="km-timeline-dot"></div>
+                                <div class="km-timeline-year">2023</div>
+                                <div class="km-timeline-label">WCAG 2.2</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="km-note">
+                        <strong>WCAG 3.0 (Silver)</strong> 正在制定中，预计采用新的评分模型替代 A/AA/AAA 分级体系
+                    </div>
+                </div>
+
+
+            </section>
+        </main>
+
+
+        <!-- work experience Card -->
+        <h4 class="text-center heading1 exp-head" style="padding-top: 5rem;">Work <span class="my_experience">Experience</span></h4>
+        <main class="container experience-cards">
+            <!-- Dynamic experience Card -->
+        </main>
+
         <!--MOOCs Cards-->
         <div id="mooc" class="container-fluid">
             <h4 class="text-center pb-2 pt-5" data-aos="fade-up" data-aos-delay="300">Online <span class="edu_background">Accreditations</span></h4>
@@ -268,15 +671,6 @@
                 <!-- Dynamic MOOCs Cards -->
             </div>
         </div>
-
-        <h4 class="text-center heading1 exp-head" style="padding-top: 5rem;">Work <span class="my_experience">Experience</span></h4>
-
-        <!-- work experience Card -->
-
-        <main class="container experience-cards">
-            <!-- Dynamic experience Card -->
-
-        </main>
     </div>
 
 
@@ -317,3 +711,143 @@
 </body>
 
 </html>
+
+<!-- JavaScript 连线绘制 -->
+<script>
+(function() {
+    // 等待 DOM 加载完成
+    function initHierarchyConnectors() {
+        const svg = document.getElementById('hierarchySvg');
+        const container = document.getElementById('hierarchyContainer');
+        
+        if (!svg || !container) return;
+
+        function drawConnections() {
+            // 清空现有连线
+            svg.innerHTML = '';
+            
+            // 获取容器位置
+            const containerRect = container.getBoundingClientRect();
+            const svgRect = svg.getBoundingClientRect();
+            
+            // 设置 SVG 尺寸
+            svg.setAttribute('width', containerRect.width);
+            svg.setAttribute('height', containerRect.height);
+            svg.setAttribute('viewBox', `0 0 ${containerRect.width} ${containerRect.height}`);
+
+            // 获取节点位置
+            const wcag = document.getElementById('node-wcag');
+            const en = document.getElementById('node-en');
+            const s508 = document.getElementById('node-508');
+            const gbt = document.getElementById('node-gbt');
+            const eaa = document.getElementById('node-eaa');
+            const procurement = document.getElementById('node-procurement');
+            const rehab = document.getElementById('node-rehab');
+            const ada = document.getElementById('node-ada');
+            const cnLaw = document.getElementById('node-cn-law');
+
+            if (!wcag || !en || !s508 || !gbt) return;
+
+            // 计算节点中心位置
+            function getNodeCenter(node) {
+                const rect = node.getBoundingClientRect();
+                return {
+                    x: rect.left - svgRect.left + rect.width / 2,
+                    y: rect.top - svgRect.top + rect.height / 2,
+                    top: rect.top - svgRect.top,
+                    bottom: rect.bottom - svgRect.top,
+                    left: rect.left - svgRect.left,
+                    right: rect.right - svgRect.left
+                };
+            }
+
+            const wcagPos = getNodeCenter(wcag);
+            const enPos = getNodeCenter(en);
+            const s508Pos = getNodeCenter(s508);
+            const gbtPos = getNodeCenter(gbt);
+
+            // 绘制实线（技术引用关系）- WCAG 到国际引用层
+            // WCAG -> EN 301 549 (直接引用 AA)
+            drawLine(svg, wcagPos.x, wcagPos.bottom, enPos.x, enPos.top, 'solid', '#4caf50');
+            
+            // WCAG -> Section 508 (引用 2.0 AA)
+            drawLine(svg, wcagPos.x, wcagPos.bottom, s508Pos.x, s508Pos.top, 'solid', '#ff9800');
+            
+            // WCAG -> GB/T 37668 (参考框架 - 虚线)
+            drawLine(svg, wcagPos.x, wcagPos.bottom, gbtPos.x, gbtPos.top, 'dashed', '#f44336');
+
+            // 绘制虚线（法规绑定关系）- 国际引用层到法规绑定层
+            if (eaa && procurement && rehab && ada && cnLaw) {
+                const eaaPos = getNodeCenter(eaa);
+                const procurementPos = getNodeCenter(procurement);
+                const rehabPos = getNodeCenter(rehab);
+                const adaPos = getNodeCenter(ada);
+                const cnLawPos = getNodeCenter(cnLaw);
+
+                // EN 301 549 -> 欧盟无障碍法案
+                drawLine(svg, enPos.x - 30, enPos.bottom, eaaPos.x, eaaPos.top, 'dashed', '#4caf50');
+                // EN 301 549 -> 公共采购指令
+                drawLine(svg, enPos.x + 30, enPos.bottom, procurementPos.x, procurementPos.top, 'dashed', '#4caf50');
+                
+                // Section 508 -> Rehabilitation Act
+                drawLine(svg, s508Pos.x - 20, s508Pos.bottom, rehabPos.x, rehabPos.top, 'dashed', '#ff9800');
+                // Section 508 -> ADA
+                drawLine(svg, s508Pos.x + 20, s508Pos.bottom, adaPos.x, adaPos.top, 'dashed', '#ff9800');
+                
+                // GB/T 37668 -> 行业执行规范
+                drawLine(svg, gbtPos.x, gbtPos.bottom, cnLawPos.x, cnLawPos.top, 'dashed', '#f44336');
+            }
+        }
+
+        function drawLine(svg, x1, y1, x2, y2, style, color) {
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            
+            // 使用贝塞尔曲线创建更自然的连接
+            const midY = (y1 + y2) / 2;
+            const d = `M ${x1} ${y1} C ${x1} ${midY}, ${x2} ${midY}, ${x2} ${y2}`;
+            
+            line.setAttribute('d', d);
+            line.setAttribute('stroke', color);
+            line.setAttribute('stroke-width', '2');
+            line.setAttribute('fill', 'none');
+            line.setAttribute('opacity', '0.7');
+            
+            if (style === 'dashed') {
+                line.setAttribute('stroke-dasharray', '6, 4');
+            }
+            
+            svg.appendChild(line);
+        }
+
+        // 初始绘制
+        drawConnections();
+        
+        // 窗口大小改变时重新绘制
+        window.addEventListener('resize', drawConnections);
+        
+        // 主题切换时重新绘制
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'data-theme' || mutation.attributeName === 'light-mode') {
+                    setTimeout(drawConnections, 100);
+                }
+            });
+        });
+        
+        observer.observe(document.documentElement, { attributes: true });
+    }
+
+    // DOM 加载完成后初始化
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHierarchyConnectors);
+    } else {
+        // 延迟执行以确保布局完成
+        setTimeout(initHierarchyConnectors, 100);
+    }
+    
+    // AOS 动画完成后重新绘制
+    window.addEventListener('load', function() {
+        setTimeout(initHierarchyConnectors, 500);
+    });
+})();
+</script>

@@ -23,7 +23,6 @@ const showCards2 = () => {
       <div class="card card1">
         <img src="${cardImage}" class="featured-image" alt="${aria_label}"/>
         <article class="card-body">
-          <header>
             <div class="title">
               <h3>${title}</h3>
             </div>
@@ -34,7 +33,7 @@ const showCards2 = () => {
             <ol>
               ${desp}
             </ol>
-          </header>
+
         </article>
       </div>
     </div>

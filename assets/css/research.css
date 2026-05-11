@@ -915,3 +915,59 @@ a:hover {
     width: 60%;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .container.research-upper.pt-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .txt-bottom {
+    height: auto;
+    min-height: auto;
+  }
+
+  .txt-bottom .row > div {
+    margin-top: 0 !important;
+  }
+
+  .txt-bottom svg {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .researchMainWrapper {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  #researchDetailsTable {
+    margin-bottom: 4rem;
+  }
+
+  #researchDetailsTable tr {
+    margin: 0 0 2rem;
+    border-radius: 14px;
+  }
+
+  #researchDetailsTable tr:hover {
+    transform: none;
+  }
+
+  .project-card-content {
+    padding: 1.25rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .researchTitleName {
+    width: 100%;
+    padding: 1rem;
+  }
+}

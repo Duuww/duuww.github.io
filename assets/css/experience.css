@@ -170,6 +170,7 @@ section > div {
   flex-flow: row wrap;
   padding: 18px;
   color: var(--head-col);
+  background-color: var(--bg);
   border-radius: 0 13px 13px 0;
 }
 
@@ -828,5 +829,774 @@ a:link {
   }
   50% {
     transform: skew(-12deg) rotate(-6deg);
+  }
+}
+
+
+
+/* ========== 主题变量定义 ========== */
+html[data-theme="light"], html[light-mode="light"] {
+    --km-text: #1a1a1a;
+    --km-text-muted: #4a4a4a;
+    --km-card-bg: #ffffff;
+    --km-card-border: rgba(102, 23, 203, 0.25);
+    --km-card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --km-node-bg: #f5f0ff;
+    --km-node-border: rgba(102, 23, 203, 0.35);
+    --km-badge-bg: rgba(102, 23, 203, 0.15);
+    --km-badge-text: #5a14b5;
+    --km-line-color: rgba(102, 23, 203, 0.5);
+    --km-table-stripe: rgba(102, 23, 203, 0.06);
+    --km-check-color: #1b7d1b;
+    --km-dash-color: #666666;
+    /* 彩色徽章文字 - 浅色模式需要更深的颜色 */
+    --km-green-text: #1a6b1a;
+    --km-orange-text: #b35900;
+    --km-red-text: #c41c1c;
+    --km-purple-accent: #7c3aed;
+}
+
+html[data-theme="dark"], html[light-mode="dark"], 
+html:not([data-theme]):not([light-mode]) {
+    --km-text: #f0f0f0;
+    --km-text-muted: #c5c5c5;
+    --km-card-bg: rgba(30, 30, 40, 0.85);
+    --km-card-border: rgba(187, 134, 252, 0.25);
+    --km-card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --km-node-bg: rgba(187, 134, 252, 0.1);
+    --km-node-border: rgba(187, 134, 252, 0.35);
+    --km-badge-bg: rgba(187, 134, 252, 0.18);
+    --km-badge-text: #d4b8ff;
+    --km-line-color: rgba(187, 134, 252, 0.5);
+    --km-table-stripe: rgba(187, 134, 252, 0.06);
+    --km-check-color: #a5d6a7;
+    --km-dash-color: #999999;
+    /* 彩色徽章文字 - 深色模式使用更亮的颜色 */
+    --km-green-text: #81c784;
+    --km-orange-text: #ffb74d;
+    --km-red-text: #ef9a9a;
+    --km-purple-accent: #bb86fc;
+}
+
+/* ========== 通用样式 ========== */
+.km-section {
+    padding: 60px 0;
+}
+
+.km-section-title {
+    color: #bb86fc;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.km-section-subtitle {
+    color: var(--km-text-muted);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.km-card {
+    background: var(--km-card-bg);
+    border: 1px solid var(--km-card-border);
+    border-radius: 16px;
+    box-shadow: var(--km-card-shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.km-card-title {
+    color: #bb86fc;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.km-card-title i {
+    font-size: 0.9rem;
+}
+
+/* ========== 知识图谱节点样式 ========== */
+.km-node {
+    background: var(--km-node-bg);
+    border: 1px solid var(--km-node-border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    color: var(--km-text);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.km-node:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(187, 134, 252, 0.2);
+}
+
+.km-node-primary {
+    background: linear-gradient(135deg, #bb86fc 0%, #9b59b6 100%);
+    color: #ffffff;
+    font-weight: 500;
+    border: none;
+    padding: 1rem 1.5rem;
+}
+
+.km-node-secondary {
+    border-color: #bb86fc;
+    border-width: 2px;
+}
+
+.km-node-label {
+    font-size: 0.75rem;
+    color: var(--km-text-muted);
+    margin-top: 0.25rem;
+}
+
+/* 连接线 */
+.km-connector {
+    position: relative;
+}
+
+.km-connector::before {
+    content: '';
+    position: absolute;
+    background: var(--km-line-color);
+}
+
+.km-connector-v::before {
+    width: 2px;
+    height: 30px;
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+}
+
+.km-connector-h::before {
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* ========== POUR 原则样式 ========== */
+.km-pour-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .km-pour-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.km-pour-card {
+    background: var(--km-node-bg);
+    border: 1px solid var(--km-node-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.km-pour-title {
+    color: var(--km-purple-accent);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.km-pour-en {
+    color: var(--km-text);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.km-criterion {
+    background: var(--km-badge-bg);
+    color: var(--km-badge-text);
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0.25rem;
+    display: inline-block;
+}
+
+/* ========== 时间线样式 ========== */
+.km-timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.km-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #bb86fc 0%, #9b59b6 50%, #bb86fc 100%);
+    transform: translateY(-50%);
+}
+
+.km-timeline-items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.km-timeline-item {
+    text-align: center;
+    flex: 1;
+}
+
+.km-timeline-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #bb86fc;
+    margin: 0 auto 0.5rem;
+    border: 3px solid var(--km-card-bg);
+    box-shadow: 0 0 0 2px #bb86fc;
+}
+
+.km-timeline-year {
+    color: #bb86fc;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.km-timeline-label {
+    color: var(--km-text);
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+/* ========== 层级图样式 ========== */
+.km-hierarchy-container {
+    position: relative;
+    padding: 0 1rem;
+}
+
+.km-hierarchy {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+.km-hierarchy-level {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem 0;
+}
+
+.km-hierarchy-label {
+    width: 80px;
+    flex-shrink: 0;
+    color: var(--km-text-muted);
+    font-size: 0.8rem;
+    padding-top: 0.75rem;
+}
+
+.km-hierarchy-nodes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.km-hierarchy-node {
+    background: var(--km-node-bg);
+    border: 1px solid var(--km-node-border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    min-width: 150px;
+    position: relative;
+}
+
+.km-hierarchy-node.wcag {
+    border-color: #bb86fc;
+    border-width: 2px;
+}
+
+.km-hierarchy-node.eu {
+    border-left: 4px solid #4caf50;
+}
+
+.km-hierarchy-node.us {
+    border-left: 4px solid #ff9800;
+}
+
+.km-hierarchy-node.cn {
+    border-left: 4px solid #f44336;
+}
+
+/* SVG 连线容器 */
+.km-hierarchy-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 连接线样式 */
+.km-line-solid {
+    stroke: var(--km-line-color);
+    stroke-width: 2;
+    fill: none;
+}
+
+.km-line-dashed {
+    stroke: var(--km-line-color);
+    stroke-width: 2;
+    stroke-dasharray: 6, 4;
+    fill: none;
+}
+
+/* 连接线标签 */
+.km-line-label {
+    font-size: 0.7rem;
+    fill: var(--km-text-muted);
+}
+
+/* 响应式隐藏连线 */
+@media (max-width: 768px) {
+    .km-hierarchy-svg {
+        display: none;
+    }
+    .km-hierarchy-level {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .km-hierarchy-label {
+        width: auto;
+        text-align: center;
+        padding-bottom: 0.5rem;
+    }
+}
+
+.km-hierarchy-node-title {
+    color: var(--km-text);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.km-hierarchy-node-desc {
+    color: var(--km-text);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    opacity: 0.8;
+}
+
+/* ========== 对比表格样式 ========== */
+.km-table-wrapper {
+    overflow-x: auto;
+}
+
+.km-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.km-table th {
+    background: var(--km-node-bg);
+    color: #bb86fc;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--km-line-color);
+}
+
+.km-table td {
+    padding: 0.875rem 1rem;
+    text-align: center;
+    color: var(--km-text);
+    border-bottom: 1px solid var(--km-card-border);
+}
+
+.km-table tbody tr:nth-child(even) {
+    background: var(--km-table-stripe);
+}
+
+.km-table tbody tr:hover {
+    background: var(--km-node-bg);
+}
+
+.km-check {
+    color: var(--km-check-color);
+    font-weight: 600;
+}
+
+.km-dash {
+    color: var(--km-dash-color);
+    font-weight: 600;
+}
+
+/* ========== 标签样式 ========== */
+.km-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.km-badge-purple {
+    background: var(--km-badge-bg);
+    color: var(--km-badge-text);
+}
+
+.km-badge-green {
+    background: rgba(76, 175, 80, 0.18);
+    color: var(--km-green-text);
+    font-weight: 600;
+}
+
+.km-badge-orange {
+    background: rgba(255, 152, 0, 0.18);
+    color: var(--km-orange-text);
+    font-weight: 600;
+}
+
+.km-badge-red {
+    background: rgba(244, 67, 54, 0.18);
+    color: var(--km-red-text);
+    font-weight: 600;
+}
+
+/* ========== 评测方法格子 ========== */
+.km-method-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 992px) {
+    .km-method-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .km-method-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.km-method-card {
+    background: var(--km-node-bg);
+    border: 1px solid var(--km-node-border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.km-method-title {
+    color: var(--km-text);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.km-method-desc {
+    color: var(--km-text);
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* ========== 报告格式格子 ========== */
+.km-report-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.km-report-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--km-node-bg);
+    border: 1px solid var(--km-node-border);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+}
+
+.km-report-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.km-report-dot.purple { background: #bb86fc; }
+.km-report-dot.green { background: #4caf50; }
+.km-report-dot.orange { background: #ff9800; }
+.km-report-dot.red { background: #f44336; }
+
+.km-report-text {
+    text-align: left;
+}
+
+.km-report-title {
+    color: var(--km-text);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.km-report-desc {
+    color: var(--km-text);
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+/* ========== 扩展内容样式 ========== */
+.km-extension-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .km-extension-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.km-extension-card {
+    background: var(--km-card-bg);
+    border: 1px solid var(--km-card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.km-extension-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--km-card-border);
+}
+
+.km-extension-title {
+    color: var(--km-text);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.km-extension-subtitle {
+    color: var(--km-text);
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
+.km-extension-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.km-extension-item {
+    background: var(--km-node-bg);
+    border: 1px solid var(--km-node-border);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    color: var(--km-text);
+}
+
+/* ========== 图例样式 ========== */
+.km-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: var(--km-node-bg);
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.km-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--km-text);
+    font-weight: 500;
+}
+
+.km-legend-line {
+    width: 30px;
+    height: 2px;
+}
+
+.km-legend-line.solid { background: var(--km-line-color); }
+.km-legend-line.dashed { 
+    background: repeating-linear-gradient(
+        90deg,
+        var(--km-line-color) 0px,
+        var(--km-line-color) 5px,
+        transparent 5px,
+        transparent 10px
+    );
+}
+
+.km-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* ========== 注释样式 ========== */
+.km-note {
+    background: var(--km-node-bg);
+    border-left: 3px solid #bb86fc;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin-top: 1.5rem;
+    color: var(--km-text);
+    font-size: 0.85rem;
+}
+
+.km-note strong {
+    color: #bb86fc;
+}
+
+@media only screen and (max-width: 767px) {
+  .main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section {
+    height: auto;
+    min-height: auto;
+  }
+
+  section > div {
+    padding-top: 3rem !important;
+  }
+
+  .dropdown {
+    position: static;
+    padding-right: 15px;
+    margin-top: 1.5rem;
+  }
+
+  .godown {
+    padding-top: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .godown svg {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .experience-cards {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .a11y-section-card .card-body {
+    padding: 1.25rem !important;
+  }
+
+  .a11y-section-table {
+    min-width: 520px;
+  }
+
+  .km-section {
+    padding: 2.5rem 0;
+  }
+
+  .km-card {
+    padding: 1rem;
+  }
+
+  .km-card-title {
+    align-items: flex-start;
+  }
+
+  .km-pour-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .km-hierarchy-container {
+    padding: 0;
+  }
+
+  .km-hierarchy-node {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .km-table {
+    min-width: 640px;
+  }
+
+  .km-report-item {
+    width: 100%;
+  }
+
+  .km-timeline {
+    padding-left: 1.75rem;
+  }
+
+  .km-timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    right: auto;
+    width: 3px;
+    height: auto;
+    transform: none;
+  }
+
+  .km-timeline-items {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .km-timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .km-timeline-dot {
+    margin: 0.15rem 0 0;
+    flex-shrink: 0;
+  }
+
+  .km-timeline-label {
+    margin-top: 0;
   }
 }
