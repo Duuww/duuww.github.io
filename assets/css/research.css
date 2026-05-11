@@ -148,6 +148,17 @@ body {
     margin-top: 1.2rem;
 }
 
+.project-actions .button {
+    margin: 0;
+    width: 120px;
+    flex: 0 0 120px;
+    min-height: 40px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
 .project-github-btn {
     text-decoration: none;
     display: inline-flex;

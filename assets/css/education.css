@@ -473,6 +473,13 @@ header p {
   border-color: transparent #f5f5f5 transparent transparent;
 }
 
+.timeline-item-split:nth-child(even) .timeline-content::after {
+  left: auto;
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #f5f5f5;
+}
+
 .timeline-item::after {
   content: "";
   display: block;
