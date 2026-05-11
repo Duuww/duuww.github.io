@@ -25,9 +25,9 @@ let header = $(`
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">Experience</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Projects</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="research.html">Research</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="techstack.html">techstack</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Case Studies</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="research.html">Tools</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="techstack.html">Skills</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Education</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="https://hashnode.com/" target="_blank">Blogs</a></li>
    <li class="nav-item">

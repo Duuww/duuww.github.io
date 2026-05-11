@@ -11,7 +11,7 @@ const research = [
     citebox: "popup1",
     image: "assets/images/research-page/colorpicker.jpg",
     abstract:
-      "A smart browser color picker enforcing WCAG 1.4.3 standards. Features a unique boundary-snapping algorithm that guarantees 100% accessible color contrast. | 基于 WCAG 标准的智能无障碍取色器，独创边界吸附算法，确保配色 100% 合规",
+      "helps users generate WCAG-compliant color contrast combinations under selected WCAG 1.4.3 parameters. | 基于 WCAG 标准的智能无障碍取色器，独创边界吸附算法，确保配色满足1.4.3 / 1.4.11",
     absbox: "absPopup1",
     addresse: "https://github.com/Duuww/wcag-color-picker",
     frage: "设计/前端难以快速判断颜色对比度是否符合 WCAG。",

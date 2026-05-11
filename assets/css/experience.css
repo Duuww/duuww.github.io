@@ -198,6 +198,95 @@ ul ol {
   height: 300px;
 }
 
+/* 添加到你的 CSS 文件或 style.css 中，确保两种主题下都有良好对比度 */
+html[data-theme="light"] {
+    --table-text: #333333;
+    --table-text-muted: #555555;
+    --card-bg: rgba(187, 134, 252, 0.08);
+    --card-border: rgba(102, 23, 203, 0.25);
+    --badge-bg: rgba(102, 23, 203, 0.15);
+    --badge-text: #6617cb;
+    --summary-text: #444444;
+}
+
+html[data-theme="dark"] {
+    --table-text: #e0e0e0;
+    --table-text-muted: #b0b0b0;
+    --card-bg: rgba(187, 134, 252, 0.05);
+    --card-border: rgba(187, 134, 252, 0.2);
+    --badge-bg: rgba(187, 134, 252, 0.2);
+    --badge-text: #bb86fc;
+    --summary-text: #b0b0b0;
+}
+
+/* 兼容旧版本的 light-mode 属性 */
+html[light-mode="light"] {
+    --table-text: #333333;
+    --table-text-muted: #555555;
+    --card-bg: rgba(187, 134, 252, 0.08);
+    --card-border: rgba(102, 23, 203, 0.25);
+    --badge-bg: rgba(102, 23, 203, 0.15);
+    --badge-text: #6617cb;
+    --summary-text: #444444;
+}
+
+html[light-mode="dark"] {
+    --table-text: #e0e0e0;
+    --table-text-muted: #b0b0b0;
+    --card-bg: rgba(187, 134, 252, 0.05);
+    --card-border: rgba(187, 134, 252, 0.2);
+    --badge-bg: rgba(187, 134, 252, 0.2);
+    --badge-text: #bb86fc;
+    --summary-text: #b0b0b0;
+}
+
+.a11y-section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.a11y-section-table {
+    color: var(--table-text);
+}
+
+.a11y-section-table th {
+    font-weight: 300;
+    color: #bb86fc;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(187, 134, 252, 0.3);
+}
+
+.a11y-section-table td {
+    padding: 10px 0;
+    color: var(--table-text);
+}
+
+.a11y-badge {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 400;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.a11y-summary {
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(187, 134, 252, 0.02) 100%);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+}
+
+.a11y-summary-text {
+    color: var(--summary-text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+
 @media only screen and (min-width: 1280px) {
   .card1 h3 {
     font-size: 32px;
