@@ -538,6 +538,42 @@ html[light-mode="dark"] {
   z-index: -1;
 }
 
+/* Scope mooc card fixes to experience page only */
+.main #mooc .content {
+  z-index: 1;
+}
+
+.main #mooc .card {
+  background: var(--bg1-color);
+  border: 1px solid rgba(187, 134, 252, 0.18);
+}
+
+.main #mooc .card-body {
+  background-color: var(--bg1-color);
+}
+
+.main #mooc .content {
+  background: rgba(187, 134, 252, 0.04);
+}
+
+.main #mooc .content-image {
+  background-color: #f5f5f5;
+  border-radius: 1.5rem;
+}
+
+html[light-mode="dark"] .main #mooc .card {
+  background: #272727;
+  border-color: rgba(187, 134, 252, 0.28);
+}
+
+html[light-mode="dark"] .main #mooc .content {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+html[light-mode="dark"] .main #mooc .content-image {
+  background-color: #f0f0f0;
+}
+
 .volunteerTitle {
   font-size: 1.5rem;
   line-height: 1.2;

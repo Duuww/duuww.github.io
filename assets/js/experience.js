@@ -44,75 +44,46 @@ const showCards2 = () => {
 };
 document.addEventListener("DOMContentLoaded", showCards2);
 
-// Volunteership Cards
-
-const volunteership = document.querySelector(".volunteership");
-const volunteershipcards = [
+const moocs1 = document.querySelector(".moocs1");
+const moocscards1 = [
   {
-    title: "GirlScript Summer Of Code 2020",
-    cardImage: "assets/images/experience-page/1.jpg",
-    description:
-      "Responsible for handling the projects GirlScript App and GirlScript Website Boilerplate.",
+    title: "W3Cx WAI0.1x 修课证明",
+    cardImage: "assets/images/education-page/c1.jpg",
   },
+  {
+    title: "DHS Section 508 Trusted Tester",
+    cardImage: "assets/images/education-page/c2.jpg",
+
+  },
+  {
+    title: "NVDA Expert",
+    cardImage: "assets/images/education-page/c3.jpg",
+  },
+  {
+    title: "HarmonyOS Developer Advanced Certification",
+    cardImage: "assets/images/education-page/c4.jpg",
+  },
+
 ];
 
 const showCards = () => {
   let output = "";
-  volunteershipcards.forEach(
-    ({ title, cardImage, description }) =>
+  moocscards1.forEach(
+    ({ title, cardImage }) =>
       (output += `        
-      <div class="card volunteerCard" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="600" style="height: 550px;width:400px">
-      
-      <img src="${cardImage}" height="250" width="65" class="card-img" style="border-radius:10px">
-      <div class="content">
-          <h2 class="volunteerTitle">${title}</h2><br>
-          <p class="copy">${description}</p></div>
-      
-      </div>
+        <div class="col-12 col-md-6 column mooc-column" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600" >  
+            <div class="card mb-3 mx-auto">
+               <div class="content">
+                  <div class="content-overlay"></div>
+                    <img src=${cardImage} class="card-img-top content-image" alt="${title} certificate">     
+                </div>
+                <div class="card-body">
+                    <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">${title}</h6>
+                </div>
+            </div>
+        </div>        
       `)
   );
-  volunteership.innerHTML = output;
+  moocs1.innerHTML = output;
 };
 document.addEventListener("DOMContentLoaded", showCards);
-
-// Hackathon Section
-
-const hackathonsection = document.querySelector(".hackathon-section");
-const mentor = [
-  {
-    title: "The Uplift Project",
-    subtitle: "Mentor",
-    image: "assets/images/experience-page/uplift.png",
-    desp: "I would be responsible for guiding 100s of participants across the globe in their first steps towards Applied Data Science and building end-to-end machine learning projects.",
-    href: "https://uplift.girlscript.tech/",
-  },
-  {
-    title: "ULHacks",
-    subtitle: "Judge",
-    image: "assets/images/experience-page/ulhacks.png",
-    desp: "ULHacks is a 36 hour long hackathon organized with an aim to enable students to create a project which empowers learning.",
-    href: "https://ulhacks.com/",
-  },
-];
-
-const showCards3 = () => {
-  let output = "";
-  mentor.forEach(
-    ({ title, image, subtitle, desp, href }) =>
-      (output += `  
-      <div class="blog-slider__item swiper-slide">
-        <div class="blog-slider__img">
-            <img src="${image}" alt="">
-        </div>
-        <div class="blog-slider__content">
-          <div class="blog-slider__title">${title}</div>
-          <span class="blog-slider__code">${subtitle}</span>
-          <div class="blog-slider__text">${desp}</div>
-          <a href="${href}" class="blog-slider__button">Read More</a>   
-        </div>
-      </div>
-      `)
-  );
-  hackathonsection.innerHTML = output;
-};
-document.addEventListener("DOMContentLoaded", showCards3);
