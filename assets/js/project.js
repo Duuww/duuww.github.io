@@ -62,7 +62,8 @@ const projects = [
 // function for rendering project cards data
 const showCards = () => {
   let output = "";
-  projects.forEach(({ title, cardImage, rule, product, country, role, range, tool, frage, out, end }) => {
+  projects.forEach(({ title, cardImage, rule, product, country, role, range, tool, frage, out, end }, index) => {
+    const dialogTitleId = `project-detail-title-${index}`;
     output += `       
         <div
           class="column project-card card"
@@ -78,7 +79,7 @@ const showCards = () => {
               class="project-card-cover"
               style="background: url(${cardImage}) center / cover no-repeat;"
             >
-              <button class="project-card-badge js-open-project-detail" type="button">
+              <button class="project-card-badge js-open-project-detail" type="button" aria-label="查看${title}案例详情">
                 查看案例详情
               </button>
             </div>
@@ -108,8 +109,8 @@ const showCards = () => {
             <div class="project-detail-modal">
               <div class="project-detail-mask js-close-project-detail"></div>
 
-              <div class="project-detail-panel" role="dialog" aria-modal="true">
-                <button class="project-detail-close js-close-project-detail" type="button">
+              <div class="project-detail-panel" role="dialog" aria-modal="true" aria-labelledby="${dialogTitleId}">
+                <button class="project-detail-close js-close-project-detail" type="button" aria-label="关闭浮层">
                   ×
                 </button>
 
@@ -120,7 +121,7 @@ const showCards = () => {
                   ></div>
 
                   <div class="project-detail-summary">
-                    <h2>${title}</h2>
+                    <h2 id="${dialogTitleId}">${title}</h2>
 
                     <div class="project-detail-tags">
                       <span>
@@ -246,6 +247,90 @@ function myFunction() {
     }
   }
 }
+
+const projectModalFocusableSelector = [
+  "button:not([disabled])",
+  "[href]",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "textarea:not([disabled])",
+  "[tabindex]:not([tabindex='-1'])"
+].join(", ");
+
+function getProjectModalFocusableElements(modal) {
+  return Array.from(modal.querySelectorAll(projectModalFocusableSelector)).filter(function (element) {
+    return !element.hasAttribute("inert") && element.offsetParent !== null;
+  });
+}
+
+function setProjectModalBackgroundInert(activeModal, isInert) {
+  Array.from(document.body.children).forEach(function (element) {
+    if (element === activeModal) {
+      return;
+    }
+
+    if (isInert) {
+      element.inert = true;
+      element.setAttribute("aria-hidden", "true");
+    } else {
+      element.inert = false;
+      element.removeAttribute("aria-hidden");
+    }
+  });
+}
+
+function openProjectModal(modal, trigger) {
+  const openModal = document.querySelector(".project-detail-modal.is-open");
+
+  if (openModal && openModal !== modal) {
+    closeProjectModal(openModal);
+  }
+
+  modal.__projectTrigger = trigger;
+  modal.__projectCard = trigger.closest(".project-card");
+  document.body.appendChild(modal);
+
+  document.body.appendChild(modal);
+
+  modal.classList.add("is-open");
+  document.body.classList.add("project-modal-open");
+  setProjectModalBackgroundInert(modal, true);
+
+  const focusableElements = getProjectModalFocusableElements(modal);
+  const initialFocusTarget =
+    modal.querySelector(".project-detail-close") ||
+    focusableElements[0] ||
+    modal.querySelector(".project-detail-panel");
+
+  if (initialFocusTarget && !initialFocusTarget.hasAttribute("tabindex")) {
+    initialFocusTarget.setAttribute("tabindex", "-1");
+  }
+
+  if (initialFocusTarget) {
+    initialFocusTarget.focus();
+  }
+}
+
+function closeProjectModal(modal) {
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove("is-open");
+  document.body.classList.remove("project-modal-open");
+  setProjectModalBackgroundInert(modal, false);
+
+  if (modal.__projectCard) {
+    modal.__projectCard
+      .querySelector(".project-card-wrapper")
+      .appendChild(modal);
+  }
+
+  if (modal.__projectTrigger) {
+    modal.__projectTrigger.focus();
+  }
+}
+
 document.addEventListener("click", function (event) {
   const openBtn = event.target.closest(".js-open-project-detail");
   const closeBtn = event.target.closest(".js-close-project-detail");
@@ -296,3 +381,77 @@ document.addEventListener("keydown", function (event) {
     document.body.classList.remove("project-modal-open");
   }
 });
+
+document.addEventListener(
+  "click",
+  function (event) {
+    const openBtn = event.target.closest(".js-open-project-detail");
+    const closeBtn = event.target.closest(".js-close-project-detail");
+
+    if (openBtn) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      const card = openBtn.closest(".project-card");
+      const modal = card.querySelector(".project-detail-modal");
+      openProjectModal(modal, openBtn);
+      return;
+    }
+
+    if (closeBtn) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      const modal = closeBtn.closest(".project-detail-modal");
+      closeProjectModal(modal);
+    }
+  },
+  true
+);
+
+document.addEventListener(
+  "keydown",
+  function (event) {
+    const modal = document.querySelector(".project-detail-modal.is-open");
+
+    if (!modal) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      closeProjectModal(modal);
+      return;
+    }
+
+    if (event.key === "Tab") {
+      const focusableElements = getProjectModalFocusableElements(modal);
+
+      event.stopImmediatePropagation();
+
+      if (focusableElements.length === 0) {
+        event.preventDefault();
+        return;
+      }
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (!modal.contains(document.activeElement)) {
+        event.preventDefault();
+        firstElement.focus();
+        return;
+      }
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    }
+  },
+  true
+);
