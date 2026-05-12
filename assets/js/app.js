@@ -9,7 +9,7 @@ document.body.appendChild(script);
 // Header
 
 let header = $(`
-<a class="skip-link" href="#main-content" aria-label="跳转至主要内容区域">跳转至主要内容区域</a>
+<a class="skip-link" href="#main-content" aria-label="Jump to the main content area">Jump to the main content area</a>
 <nav class="navbar navbar-expand-lg fixed-top dark-theme" id="navbar">
 <a class="navbar-brand" href="index.html">Wei Wang </a>
 <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
