@@ -1021,3 +1021,71 @@ outline: none;
     transform: scale(0) rotateZ(-90deg);
   }
 }
+
+    /* Contact rows */
+    .contact-me-widget .card-body {
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    }
+    .contact-me-widget .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .contact-me-widget p{
+      color: #bb86fc;
+    }
+    .contact-me-widget .icon-wrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    .contact-me-widget .icon-wrap.blue  { background: #E6F1FB; color: #185FA5; }
+    .contact-me-widget .icon-wrap.teal  { background: #E1F5EE; color: #0F6E56; }
+    .contact-me-widget .icon-wrap.gray  { background: #F1EFE8; color: #5F5E5A; }
+ 
+    .contact-me-widget .contact-row .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9b9891;
+      margin-bottom: 2px;
+    }
+    .contact-me-widget .contact-row a,
+    .contact-me-widget .contact-row span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .contact-me-widget .contact-row a:hover { text-decoration: underline; }
+ 
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      .contact-me-widget p { color: #9b9891; }
+      .contact-me-widget .card-body { border-color: rgba(255,255,255,0.08); }
+      .contact-me-widget .contact-row .label { color: #6b6a66; }
+      .contact-me-widget .contact-row a,
+      .contact-me-widget .contact-row span { color: #f0efe9; }
+      .contact-me-widget .icon-wrap.blue  { background: #0C447C; color: #B5D4F4; }
+      .contact-me-widget .icon-wrap.teal  { background: #085041; color: #9FE1CB; }
+      .contact-me-widget .icon-wrap.gray  { background: #444441; color: #D3D1C7; }
+      .contact-me-widget .card-footer .label { color: #6b6a66; }
+      .contact-me-widget .social-links a {
+        background: #2e2e2b;
+        border-color: rgba(255,255,255,0.12);
+        color: #f0efe9;
+      }
+      .contact-me-widget .social-links a:hover {
+        background: #3a3a37;
+        border-color: rgba(255,255,255,0.22);
+      }
+    }
