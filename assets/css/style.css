@@ -106,6 +106,29 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
 }
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  z-index: 2000;
+  padding: 12px 16px;
+  color: #fff;
+  background: #111;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.skip-link:not(:focus) {
+  pointer-events: none;
+}
+
 .text-center heading1 exp-head {
   color: white;
 }

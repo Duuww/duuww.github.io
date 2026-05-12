@@ -9,6 +9,7 @@ document.body.appendChild(script);
 // Header
 
 let header = $(`
+<a class="skip-link" href="#main-content" aria-label="跳转至主要内容区域">跳转至主要内容区域</a>
 <nav class="navbar navbar-expand-lg fixed-top dark-theme" id="navbar">
 <a class="navbar-brand" href="index.html">Wei Wang </a>
 <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -190,6 +191,15 @@ let footer = $(`
                 <span>WuHan, HuBei</span>
               </div>
             </div>
+            <div class="contact-row">
+              <div class="icon-wrap gray" aria-hidden="true">
+                <i class="ti ti-users"></i>
+              </div>
+              <div>
+                <p class="label">Job Intentions</p>
+                <span>ICT Accessibility Compliance Engineer/software test Engineer/hardware test Engineer/Quality Engineer</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -273,6 +283,21 @@ $(function () {
   bodyElement.append(footer);
   bodyElement.append(upArrow);
   $("#btnScrollToTop").css("visibility", "hidden");
+
+  const mainContentTarget =
+    document.querySelector("main") ||
+    document.getElementById("home") ||
+    document.querySelector("section") ||
+    document.querySelector("body > div:not(.loader-container)");
+
+  if (mainContentTarget) {
+    const mainContentId = mainContentTarget.id || "main-content";
+    mainContentTarget.id = mainContentId;
+    mainContentTarget.setAttribute("tabindex", "-1");
+    document
+      .querySelector(".skip-link")
+      ?.setAttribute("href", `#${mainContentId}`);
+  }
 
   //toggler hamburger functions
   const menuBtn = document.querySelector(".navbar-toggler");
