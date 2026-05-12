@@ -69,9 +69,9 @@ const fillData = () => {
 
     }) =>
       (output += `
-            <tr data-aos="zoom-in-left"> 
+            <tr data-aos="zoom-in-left" role="main"> 
               <td class="imgCol">
-                  <img src="${image}" class="rImg">
+                  <img src="${image}" class="rImg" alt="${title}">
               </td>
 
               <td class="researchTitleName project-card-content">

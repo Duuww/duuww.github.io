@@ -72,6 +72,7 @@ const showCards = () => {
           data-aos-easing="linear"
           data-aos-delay="300"
           data-aos-duration="600"
+          role="main"
         >
           <div class="project-card-wrapper">
             <!-- 卡片图片区域 -->

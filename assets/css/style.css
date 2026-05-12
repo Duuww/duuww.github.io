@@ -860,9 +860,13 @@ form {
 
 .form-comtainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+}
+
+.footer .row {
+  align-items: flex-start;
 }
 
 .footer hr {
