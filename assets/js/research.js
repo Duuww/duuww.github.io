@@ -118,6 +118,7 @@ const fillData = () => {
                           class="button button-accent button-small project-github-btn"
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label="${title} on github"
                       >
                           GitHub
                       </a>
